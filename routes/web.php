@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Concerts;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ConcertsController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// // Route::get('/admin', function () {
+//     return view('layout.admin');
+// });
+
+
+
+Route::prefix('admin')
+    ->group(function () {
+        // Route to show the admin dashboard
+        Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+        // Route to show the tour package page
+        Route::resource('concert', ConcertsController::class);
+        // // Route to show the gallery page
+        // Route::resource('gallery', GalleryController::class);
+        // // Route to show the transaction page
+        // Route::resource('transaction', TransactionController::class);
+    });
