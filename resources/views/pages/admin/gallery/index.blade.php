@@ -58,14 +58,14 @@
                                     </td>
                                     <td>
                                         <a href="{{route('gallery.edit', $item->id)}}" class="btn btn-primary">
-                                            <i class="fas fa-pencil-alt"></i>
+                                            edit
                                         </a>
 
                                         <form action="{{route('gallery.destroy', $item->id)}}" method="POST" class="d-inline">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger">
-                                                <i class="fas fa-trash"></i>
+                                                delete
                                             </button>
                                         </form>
                                     </td>

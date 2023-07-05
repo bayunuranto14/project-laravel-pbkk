@@ -25,7 +25,7 @@
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Transaksi</span></li>
 
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="#" aria-expanded="false"><i data-feather="dollar-sign" class="feather-icon"></i><span class="hide-menu">Data Transaksi
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{route('transaction.index')}}" aria-expanded="false"><i data-feather="dollar-sign" class="feather-icon"></i><span class="hide-menu">Data Transaksi
                         </span></a>
                 <li class="list-divider"></li>
             </ul>

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ConcertsController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
-
+use App\Http\Controllers\Admin\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,5 +35,5 @@ Route::prefix('admin')
         // // Route to show the gallery page
         Route::resource('gallery', GalleryController::class);
         // // Route to show the transaction page
-        // Route::resource('transaction', TransactionController::class);
+        Route::resource('transaction', TransactionController::class);
     });
