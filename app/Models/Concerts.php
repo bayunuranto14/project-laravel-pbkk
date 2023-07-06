@@ -22,8 +22,8 @@ class Concerts extends Model
     ];
     protected $hidden = [];
 
-    // public function galleries()
-    // {
-    //     return $this->hasMany(Gallery::class, 'tour_packages_id', 'id');
-    // }
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'concerts_id', 'id');
+    }
 }

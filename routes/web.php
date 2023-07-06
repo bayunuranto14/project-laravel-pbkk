@@ -2,6 +2,7 @@
 
 use App\Models\Concerts;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\ConcertsController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -17,9 +18,8 @@ use App\Http\Controllers\Admin\TransactionController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Route to show the home page
+Route::get('/', [HomeController::class, 'index'])->name('home');
 // // Route::get('/admin', function () {
 //     return view('layout.admin');
 // });

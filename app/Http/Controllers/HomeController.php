@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Concerts;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // return view('pages.home',[
-    //     'items' => $items,
-    //     'testimonies' => []
-    // ]);
+    public function index(Request $request)
+    {
+        //get the Concerts with gallery
+        $items = Concerts::with(['galleries'])->get();
+
+        //return view with items
+        return view('pages.home', [
+            'items' => $items,
+            'testimonies' => []
+        ]);
+    }
 }
-// antum ngapain ????
