@@ -62,7 +62,7 @@ SUMMERSONIC
                         <div class="travel-country">{{$item->location}}</div>
                         <div class="travel-location">{{$item->title}}</div>
                         <div class="travel-button mt-auto">
-                            <a href="#" class="btn btn-travel-details px-4">
+                            <a href="{{route('detail',$item->slug)}}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
