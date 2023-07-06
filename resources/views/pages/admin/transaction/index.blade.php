@@ -52,7 +52,7 @@
                                 <tr>
                                     <td>{{$item->id}}</td>
                                     <td>{{$item->concert->title}}</td>
-                                    <td>Name</td>
+                                    <td>{{$item->user->name}}</td>
                                     <td>Rp. {{$item->transaction_total}}</td>
                                     <td>{{$item->transaction_status}}</td>
                                     <td>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-TREVGO
+SUMMERSONIC
 @endsection
 
 @section('content')
