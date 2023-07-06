@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ConcertsController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\DetailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +24,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // // Route::get('/admin', function () {
 //     return view('layout.admin');
 // });
+Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
 
 // Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')
+    ->middleware(['auth', 'admin'])
     ->group(function () {
         // Route to show the admin dashboard
         Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');

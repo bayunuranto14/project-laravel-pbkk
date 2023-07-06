@@ -56,7 +56,7 @@
                                     <td>{{$item->location}}</td>
                                     <td>{{$item->guest_star}}</td>
                                     <td>{{$item->type}}</td>
-                                    <td>$ {{$item->price}}</td>
+                                    <td>Rp. {{$item->price}}</td>
                                     <td>
                                         <a href="#" class="btn btn-primary">
                                             edit
