@@ -6,9 +6,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // return view('pages.home',[
-    //     'items' => $items,
-    //     'testimonies' => []
-    // ]);
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('pages.home');
+    }
 }
-// antum ngapain ????

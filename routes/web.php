@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ConcertsController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\TransactionController;
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ use App\Http\Controllers\Admin\TransactionController;
 //     return view('layout.admin');
 // });
 
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')
     ->group(function () {
@@ -37,3 +38,7 @@ Route::prefix('admin')
         // // Route to show the transaction page
         Route::resource('transaction', TransactionController::class);
     });
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
