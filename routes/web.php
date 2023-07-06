@@ -24,7 +24,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //     return view('layout.admin');
 // });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')
     ->group(function () {
