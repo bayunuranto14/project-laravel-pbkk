@@ -51,9 +51,9 @@
                                 @forelse ($items as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
-                                    <td>Title</td>
+                                    <td>{{$item->concert->title}}</td>
                                     <td>Name</td>
-                                    <td>$ {{$item->transaction_total}}</td>
+                                    <td>Rp. {{$item->transaction_total}}</td>
                                     <td>{{$item->transaction_status}}</td>
                                     <td>
                                         <a data-remote="{{route('transaction.show', $item->id)}}" data-toggle="modal" data-target="#myModal" class="btn btn-light">

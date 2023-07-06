@@ -1,5 +1,5 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/assets/images/favicon.png')}}">
-<link rel="stylesheet" href="{{asset('frontend/libraries/bootstrap/css/bootstrap.css')}}"/>
+<link rel="stylesheet" href="{{asset('frontend/libraries/bootstrap/css/bootstrap.css')}}" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

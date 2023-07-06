@@ -38,13 +38,13 @@ body {
 header {
   margin-top: -68px;
   padding: 250px 0 165px;
-  background-image: url("../images/header-1.jpg");
+  background-image: url("https://w.wallhaven.cc/full/4y/wallhaven-4ygk57.jpg");
   background-size: cover;
 }
 
 header h1,
 header p {
-  color: #fff;
+  color: #ffffff;
 }
 
 header h1 {
@@ -87,7 +87,7 @@ header .btn-get-started:hover {
 
 .section-popular {
   min-height: 1200px;
-  background-color: #51ade5;
+  background-color: #050d74;
   margin-top: -50px;
   margin-bottom: -900px;
 }

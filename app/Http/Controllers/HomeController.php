@@ -2,27 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Concerts;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function index(Request $request)
     {
-        $this->middleware('auth');
-    }
+        //get the Concerts with gallery
+        $items = Concerts::with(['galleries'])->get();
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('pages.home');
+        //return view with items
+        return view('pages.home', [
+            'items' => $items,
+            'testimonies' => []
+        ]);
     }
 }
