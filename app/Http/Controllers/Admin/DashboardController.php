@@ -14,6 +14,9 @@ class DashboardController extends Controller
         // show the admin dashboard
         return view('pages.admin.dashboard', [
             'concerts' => Concerts::count(),
+            'transaction' => Transaction::count(),
+            'transaction_pending' => Transaction::where('transaction_status', 'PENDING')->count(),
+            'transaction_success' => Transaction::where('transaction_status', 'SUCCESS')->count()
         ]);
     }
 }

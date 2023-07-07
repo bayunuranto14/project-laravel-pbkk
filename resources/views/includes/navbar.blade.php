@@ -19,9 +19,6 @@
                 <li class="nav-item mx-md-2">
                     <a class="nav-link" href="{{route('home')}}/#partner">Partner</a>
                 </li>
-                <li class="nav-item mx-md-2">
-                    <a class="nav-link" href="{{route('home')}}/#testimonialsHeading">Testimonial</a>
-                </li>
 
                 @guest
 

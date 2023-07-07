@@ -91,54 +91,6 @@ SUMMERSONIC
         </div>
     </section>
 
-    <section class="section-testimonials-heading" id="testimonialsHeading">
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <h2>They Are Loving Us</h2>
-                    <p>
-                        Moments were giving them
-                        <br />
-                        the best experience
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-testimonials-content" id="testimonialsContent">
-        <div class="container">
-            <div class="section-popular-travel row justify-content-center match-height">
-                @forelse ($testimonies as $testimony )
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <div class="card card-testimonial text-center">
-                        <div class="testimonial-content">
-                            <img {{-- src="frontend/images/avatar-1.png" --}} alt="" class="mb-4 rounded-circle" />
-                            <h3 class="mb-4">{{ $testimony->name }}</h3>
-                            <p class="testimonials">
-                                “ {{ $testimony->comment }} “
-                            </p>
-                        </div>
-                        <hr />
-                        <p class="trip-to mt-2">Trip to {{ $testimony->trip }}</p>
-                    </div>
-                </div>
-                @empty
-                <h1> Not Yet Implemented </h1>
-                @endforelse
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
-                        I Need Help
-                    </a>
-                    <a href="#" class="btn btn-get-started px-4 mt-4 mx-1">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 @endsection

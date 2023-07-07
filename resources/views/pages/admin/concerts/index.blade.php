@@ -58,11 +58,11 @@
                                     <td>{{$item->type}}</td>
                                     <td>Rp. {{$item->price}}</td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">
+                                        <a href="{{route('concert.edit', $item->id)}}" class="btn btn-primary">
                                             edit
                                         </a>
 
-                                        <form action="#" method="POST" class="d-inline">
+                                        <form action="{{route('concert.destroy', $item->id)}}" method="POST" class="d-inline">
                                             @csrf @method('delete')
                                             <button class="btn btn-danger">
                                                 delete

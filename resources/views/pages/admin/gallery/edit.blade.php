@@ -42,8 +42,8 @@
                         @csrf
                         <div class="form-group">
                             <label for="title">Wisata</label>
-                            <input type="text" class="form-control" name="tour_packages_title" readonly placeholder="Title" value="{{$item->tour_package->title}}">
-                            <input type="text" class="form-control" name="tour_packages_id" hidden placeholder="Title" value="{{$item->tour_package->id}}">
+                            <input type="text" class="form-control" name="concerts_title" readonly placeholder="Title" value="{{$item->concerts->title}}">
+                            <input type="text" class="form-control" name="concerts_id" hidden placeholder="Title" value="{{$item->concerts->id}}">
                         </div>
                         <div class="form-group">
                             <label for="image">Image</label>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\CheckoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,29 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // });
 Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
 
+
+Route::post('/checkout/{id}', [CheckoutController::class, 'process'])
+    ->name('checkout_process')
+    ->middleware('auth', 'verified');
+
+Route::get('/checkout/{id}', [CheckoutController::class, 'index'])
+    ->name('checkout')
+    ->middleware('auth', 'verified');
+
+Route::post('/checkout/create/{detail_id}', [CheckoutController::class, 'create'])
+    ->name('checkout-create')
+    ->middleware('auth', 'verified');
+
+Route::get('/checkout/remove/{detail_id}', [CheckoutController::class, 'remove'])
+    ->name('checkout-remove')
+    ->middleware('auth', 'verified');
+
+// route get for complete the checkout
+Route::get('/checkout/confirm/{id}', [CheckoutController::class, 'success'])
+    ->name('checkout-success')
+    ->middleware('auth', 'verified');
+
+
 // Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')
@@ -43,4 +67,4 @@ Route::prefix('admin')
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

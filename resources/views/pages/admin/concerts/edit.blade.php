@@ -38,7 +38,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">{{$item->title}}</h3>
-                    <form action="{{ route('tour-package.update', $item->id) }}" method="post">
+                    <form action="{{ route('concert.update', $item->id) }}" method="post">
                         @method('PUT')
                         @csrf
                         <div class="form-group">
@@ -56,6 +56,10 @@
                         <div class="form-group">
                             <label for="featured_event">Guest Star</label>
                             <input type="text" class="form-control" name="guest_star" placeholder="Guest Star" value="{{ $item->featured_event }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" class="form-control" name="date" placeholder="Departure Date" value="{{ old('date') }}" />
                         </div>
                         <div class="form-group">
                             <label for="type">Type</label>
